@@ -13,6 +13,7 @@ from tools.make_video import MakeVideoParams
 
 
 class Video3dParamsParser:
+    #test
     def __init__(self):
         self.parser = argparse.ArgumentParser()
         self.initialized = False
