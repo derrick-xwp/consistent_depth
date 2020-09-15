@@ -5,7 +5,7 @@ import torch
 
 from utils.url_helpers import get_model_from_url
 
-from .midas_v2.midas_net import MidasNet
+from .midas_v2.midas.midas_net import MidasNet
 from .depth_model import DepthModel
 
 

@@ -4,8 +4,8 @@
 from params import Video3dParamsParser
 from process import DatasetProcessor
 
-
 if __name__ == "__main__":
+
     parser = Video3dParamsParser()
     params = parser.parse()
 

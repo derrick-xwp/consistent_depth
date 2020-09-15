@@ -29,11 +29,11 @@ class DatasetProcessor:
         return out_dir
 
     def extract_frames(self, params):
-        print_banner("Extracting PTS")
-        self.video.extract_pts()
+        print_banner("Extracting PTS")  # print a beautiful banner
+        self.video.extract_pts()  # 从视频文件得到pts然后保存入frames.txt 文件中
 
         print_banner("Extracting frames")
-        self.video.extract_frames()
+        self.video.extract_frames()  # 从视频文件提取frame
 
     def pipeline(self, params):
         self.extract_frames(params)
@@ -102,9 +102,9 @@ class DatasetProcessor:
         self.path = params.path
         os.makedirs(self.path, exist_ok=True)
 
-        self.video_file = params.video_file
+        self.video_file = params.video_file  # path to the video file
 
-        self.out_dir = self.create_output_path(params)
+        self.out_dir = self.create_output_path(params)  # generate output path
 
         self.video = Video(params.path, params.video_file)
         self.flow = Flow(params.path, self.out_dir)
@@ -113,7 +113,7 @@ class DatasetProcessor:
 
         print(f"Output directory: {self.out_dir}")
 
-        if params.op == "all":
+        if params.op == "all":  # the operation to take
             return self.pipeline(params)
         elif params.op == "extract_frames":
             return self.extract_frames(params)
