@@ -85,7 +85,7 @@ class Video3dParamsParser:
         self.parser.add_argument("--make_video", action="store_true")
         MakeVideoParams.add_arguments(self.parser)
 
-    def print(self):
+    def print_p(self):
         print("------------ Parameters -------------")
         args = vars(self.params)
         for k, v in sorted(args.items()):
@@ -119,6 +119,6 @@ class Video3dParamsParser:
         if self.params.lambda_view_baseline < 0:
             self.params.lambda_view_baseline = model.lambda_view_baseline
 
-        self.print()
+        self.print_p()
 
         return self.params
