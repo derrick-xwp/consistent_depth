@@ -1,7 +1,7 @@
 # Copyright (c) Facebook, Inc. and its affiliates.
 
 # Install packages
-sudo apt-get install \
+apt-get install \
     git \
     cmake \
     build-essential \
