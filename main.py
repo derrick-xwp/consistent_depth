@@ -11,3 +11,5 @@ if __name__ == "__main__":
 
     dp = DatasetProcessor()
     dp.process(params)
+
+    # test
